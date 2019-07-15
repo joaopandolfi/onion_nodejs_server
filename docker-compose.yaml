@@ -1,0 +1,20 @@
+version: "3" 
+services:
+
+  mysql:
+    image: mysql:5.6.40
+#    ports:
+#     - "3311:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+
+  onion:
+    build:
+      context: ./Onion
+    volumes:
+      - "./Onion/app:/usr/local/etc/app"
+    links:
+      - mysql
+
+ 
+      

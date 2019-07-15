@@ -1,0 +1,74 @@
+{% extends './default-page.hbs' %} 
+
+{% block aside %}
+{% endblock %}
+
+{% block style %}
+<style>
+    /* ------------------------------------------ LOGIN ------------------------------------------ */
+    #login{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#2D7EB0, #1F3E50);
+    }
+    #login img{
+        width: 160px;
+        margin-bottom: 40px;
+    }
+
+    #login h1{
+        font-size: 14pt;
+        font-weight: 500;
+        color: #162B38;
+    }
+
+    #login form{
+        width: 300px;
+        padding: 20px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #login form > *{
+        width: calc(100% - 16px);
+    }
+    #login form > *:not(:last-child){
+        margin-bottom: 15px;
+    }
+    #login input[type="submit"]{
+        width: 100%;
+        background-color: #19A7F3;
+        color: #FFFFFF;
+    }
+
+    #login a{
+        text-decoration: underline;
+        font-size: 9pt;
+        font-weight: 400;
+        color: #162B38;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section id="login">
+    <form method="POST" action="/login">
+        <h1>Login</h1>
+         <input id="username" type="text" name="username" placeholder="Login" />
+        <input id="password" type="password" name="password" placeholder="Senha: " />
+        <input type="submit" value="Log In" />
+    </form>
+</section>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

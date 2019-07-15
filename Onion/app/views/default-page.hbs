@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+{% include "./components/head.hbs" %}
+
+{% block style %}
+{% endblock %}
+<body>
+    {% include "./components/head.hbs" %}
+    <div id="main">
+        {% block aside %}
+            {% include "./components/aside.hbs" %}
+        {% endblock %}
+	    
+    	<main id="page">
+            {% include "./components/header.hbs" %}
+            <section id="content">
+					{% block content %}
+                    {% endblock %}
+	        </section>
+        </main>
+</div>
+</body>
+
+{% include "./components/scripts.hbs" %}
+{% block scripts %}
+{% endblock %}
+</html>

@@ -1,0 +1,126 @@
+{% extends './default-page.hbs' %} 
+
+{% block aside %}
+{% endblock %}
+{% block style %}
+<style>
+
+    .head-geral{
+
+    }
+
+    .img-left{
+        float: left;
+        width: 70%;
+    }
+
+    .img-ecg{
+        width: 100%;
+    }
+
+    .form-data {
+        float: left;
+        height: 90vh;
+        width: 28%;
+        padding-left: 2%;
+        overflow:auto;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="head-geral">
+        Usuário: {{ user.name }} | ID ECG: {{ ecgs.image }} de {{ ecgs.total }} | #{{ ecg.msg }}#
+    </div>
+    <br>
+
+    <div class="img-left">
+        <img src="/file/ecg/fig ({{ ecgs.image }}).png" alt="ECG: {{ ecgs.image }}"  class="img-ecg"/>
+    </div>
+    <div class="form-data">
+        <form method="POST" action="/">
+            <input type="text" name="image" value="{{ ecgs.image }}" hidden="true"/>
+
+            <h1>Laudo geral</h1>
+            <input type="radio" name="geral" value="1"> COM Supra<br>
+            <input type="radio" name="geral" value="0"> SEM Supra <br>
+            <input type="radio" name="geral" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <h1>V1</h1>
+            <input type="radio" name="v1" value="1"> COM Supra<br>
+            <input type="radio" name="v1" value="0"> SEM Supra <br>
+            <input type="radio" name="v1" value="2" checked="checked"> NAO SEI
+            
+            <BR><BR>
+            <h1>V2</h1>
+            <input type="radio" name="v2" value="1"> COM Supra<br>
+            <input type="radio" name="v2" value="0"> SEM Supra <br>
+            <input type="radio" name="v2" value="2" checked="checked"> NAO SEI
+            
+            <BR><BR>
+            <h1>V3</h1>
+            <input type="radio" name="v3" value="1"> COM Supra<br>
+            <input type="radio" name="v3" value="0"> SEM Supra <br>
+            <input type="radio" name="v3" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <h1>V4</h1>
+            <input type="radio" name="v4" value="1"> COM Supra<br>
+            <input type="radio" name="v4" value="0"> SEM Supra <br>
+            <input type="radio" name="v4" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <h1>V5</h1>
+            <input type="radio" name="v5" value="1"> COM Supra<br>
+            <input type="radio" name="v5" value="0"> SEM Supra <br>
+            <input type="radio" name="v5" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <h1>V6</h1>
+            <input type="radio" name="v6" value="1"> COM Supra<br>
+            <input type="radio" name="v6" value="0"> SEM Supra <br>
+            <input type="radio" name="v6" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <h1>AVR</h1>
+            <input type="radio" name="avr" value="1"> COM Supra<br>
+            <input type="radio" name="avr" value="0"> SEM Supra <br>
+            <input type="radio" name="avr" value="2" checked="checked"> NAO SEI
+            <BR><BR>
+
+            <h1>AVL</h1>
+            <input type="radio" name="avl" value="1"> COM Supra<br>
+            <input type="radio" name="avl" value="0"> SEM Supra <br>
+            <input type="radio" name="avl" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <h1>AVF</h1>
+            <input type="radio" name="avf" value="1"> COM Supra<br>
+            <input type="radio" name="avf" value="0"> SEM Supra <br>
+            <input type="radio" name="avf" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <h1>I</h1>
+            <input type="radio" name="i" value="1"> COM Supra<br>
+            <input type="radio" name="i" value="0"> SEM Supra <br>
+            <input type="radio" name="i" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <h1>II</h1>
+            <input type="radio" name="ii" value="1"> COM Supra<br>
+            <input type="radio" name="ii" value="0"> SEM Supra <br>
+            <input type="radio" name="ii" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <h1>III</h1>
+            <input type="radio" name="iii" value="1"> COM Supra<br>
+            <input type="radio" name="iii" value="0"> SEM Supra <br>
+            <input type="radio" name="iii" value="2" checked="checked"> NAO SEI
+
+            <BR><BR>
+            <input type="submit" value="ENVIAR">
+        </form>
+    </div>
+    
+{% endblock %}
