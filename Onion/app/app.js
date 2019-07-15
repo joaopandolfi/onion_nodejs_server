@@ -28,8 +28,6 @@ let njk_env = nunjucks.configure("views", {
     watch: true
 });
 
-// Set Nunjucks as rendering engine for pages with .html suffix
-
 //Logs
 app.use(morgan("common"))
 
@@ -38,6 +36,7 @@ app.use(helmet())
 
 // Cookie parser
 app.use(cookieParser())
+
 // Body parser
 app.use(bodyParser.urlencoded({
     extended: true

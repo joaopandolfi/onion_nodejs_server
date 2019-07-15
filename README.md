@@ -4,7 +4,9 @@ Onion Nodejs server
 ## Docker
 ### Compose
 * docker-compose up
-Ou 
+
+Or 
+
 * docker-compose build
 * docker-compose up
 
